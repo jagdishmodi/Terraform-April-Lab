@@ -1,6 +1,9 @@
 resource "azurerm_resource_group" "example" {
   name     = var.rg-name
   location = var.location
+  tag = {
+    env = "prod"
+  }
 }
 
 resource "azurerm_virtual_network" "example" {
